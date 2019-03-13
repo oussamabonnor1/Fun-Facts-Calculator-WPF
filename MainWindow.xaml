@@ -13,13 +13,12 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="#FF8B8B8B" BorderThickness="0 0 .3 0">
-            <Image Margin="70" 
-               Source="C:\Users\oussama\Pictures\Icons\profile.png"/>
+            <Image Source="/Res/calculator.png" Margin="75"/>
         </Border>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-            <TextBox Margin="50 15 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
-            <PasswordBox Margin="50 0 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
-            <Button  Margin="50 0 50 5" Content="Connect"   Height="30"   Background="#11A1D5" Foreground="#fff"/>
+            <TextBox x:Name="textBoxEmail" Margin="50 15 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
+            <PasswordBox Margin="50 0 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#FF2597CE" Foreground="White"/>
+            <Button  Margin="50 0 50 5" Content="Connect"   Height="30"   Background="#FF2597CE" Foreground="#fff"/>
             <Grid Margin="50 5 50 15">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
