@@ -1,0 +1,34 @@
+﻿<Window x:Class="DesktopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopApp"
+        mc:Ignorable="d"
+        Title="LogIn" Height="360" Width="600">
+
+    <Grid Background="#29363F" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="#FF8B8B8B" BorderThickness="0 0 .3 0">
+            <Image Margin="70" 
+               Source="C:\Users\oussama\Pictures\Icons\profile.png"/>
+        </Border>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBox Margin="50 15 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
+            <PasswordBox Margin="50 0 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
+            <Button  Margin="50 0 50 5" Content="Connect"   Height="30"   Background="#11A1D5" Foreground="#fff"/>
+            <Grid Margin="50 5 50 15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Forgot password"  Foreground="#FFA0A0A0"/>
+                <TextBlock Text="Create account" Grid.Column="1" TextAlignment="Right" Foreground="#FFA0A0A0"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+    
+</Window>
