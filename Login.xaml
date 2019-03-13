@@ -17,8 +17,8 @@
         </Border>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBox x:Name="textBoxEmail" Margin="50 15 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
-            <PasswordBox Margin="50 0 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#FF2597CE" Foreground="White"/>
-            <Button  Margin="50 0 50 5" Content="Connect"   Height="30"   Background="#FF2597CE" Foreground="#fff"/>
+            <PasswordBox x:Name="passwordBox" Margin="50 0 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#FF2597CE" Foreground="White"/>
+            <Button  Margin="50 0 50 5" Content="Connect"   Height="30"   Background="#FF2597CE" Foreground="#fff" Click="Button_Click"/>
             <Grid Margin="50 5 50 15">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
