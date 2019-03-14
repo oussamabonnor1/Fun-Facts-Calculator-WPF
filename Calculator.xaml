@@ -31,48 +31,48 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="0" Grid.Row="0" Background="Transparent" Content="1" FontSize="36" Foreground="#fff" x:Name="buttonOne" Click="ButtonClick"/>
-                <Button Grid.Column="1" Grid.Row="0" Background="Transparent" Content="2" FontSize="36" Foreground="#fff" x:Name="buttonTwo" Click="ButtonClick"/>
-                <Button Grid.Column="2" Grid.Row="0" Background="Transparent" Content="3" FontSize="36" Foreground="#fff" x:Name="buttonThree" Click="ButtonClick"/>
-                <Button Grid.Column="0" Grid.Row="1" Background="Transparent" Content="4" FontSize="36" Foreground="#fff" x:Name="buttonFour" Click="ButtonClick"/>
-                <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Content="5" FontSize="36" Foreground="#fff" x:Name="buttonFive" Click="ButtonClick"/>
-                <Button Grid.Column="2" Grid.Row="1" Background="Transparent" Content="6" FontSize="36" Foreground="#fff" x:Name="buttonSix" Click="ButtonClick"/>
-                <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="7" FontSize="36" Foreground="#fff" x:Name="buttonSeven" Click="ButtonClick"/>
-                <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="8" FontSize="36" Foreground="#fff" x:Name="buttonEight" Click="ButtonClick"/>
-                <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="9" FontSize="36" Foreground="#fff" x:Name="buttonNine" Click="ButtonClick"/>
-                <Button Grid.Column="3" Grid.Row="0" Background="Transparent" Content="+/-" FontSize="36" Foreground="#fff" x:Name="buttonRel" Click="ButtonClick"/>
-                <Button Grid.Column="3" Grid.Row="1" Background="Transparent" Content="0" FontSize="36" Foreground="#fff" x:Name="buttonZero" Click="ButtonClick"/>
-                <Button Grid.Column="3" Grid.Row="2" Background="Transparent" Content="." FontSize="36" Foreground="#fff" x:Name="buttonPoint" Click="ButtonClick"/>
+
+                <Button Grid.Column="0" Grid.Row="0" Content="1" FontSize="36" Foreground="#fff" x:Name="buttonOne" Click="ButtonClick" Background="{x:Null}" BorderBrush="#FF999FA8"/>
+                <Button Grid.Column="1" Grid.Row="0" Background="Transparent" Content="2" FontSize="36" Foreground="#fff" x:Name="buttonTwo" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="2" Grid.Row="0" Background="Transparent" Content="3" FontSize="36" Foreground="#fff" x:Name="buttonThree" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="0" Grid.Row="1" Background="Transparent" Content="4" FontSize="36" Foreground="#fff" x:Name="buttonFour" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Content="5" FontSize="36" Foreground="#fff" x:Name="buttonFive" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="2" Grid.Row="1" Background="Transparent" Content="6" FontSize="36" Foreground="#fff" x:Name="buttonSix" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="7" FontSize="36" Foreground="#fff" x:Name="buttonSeven" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="8" FontSize="36" Foreground="#fff" x:Name="buttonEight" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="9" FontSize="36" Foreground="#fff" x:Name="buttonNine" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="3" Grid.Row="0" Background="Transparent" Content="+/-" FontSize="36" Foreground="#fff" x:Name="buttonRel" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="3" Grid.Row="1" Background="Transparent" Content="0" FontSize="36" Foreground="#fff" x:Name="buttonZero" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="3" Grid.Row="2" Background="Transparent" Content="." FontSize="36" Foreground="#fff" x:Name="buttonPoint" Click="ButtonClick" BorderBrush="#999FA8"/>
             </Grid>
-            <Border BorderThickness="3 0 0 0" BorderBrush="#909090" Grid.Column="1">
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Border BorderThickness="1 0 0 0" Grid.Column="1" BorderBrush="#405462" Background="#618FE0">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Button Grid.Column="0" Grid.Row="0" Background="Transparent" Content="+" FontSize="36" Foreground="#fff" x:Name="buttonPlus" Click="ButtonOp"/>
-                <Button Grid.Column="1" Grid.Row="0" Background="Transparent" Content="-" FontSize="36" Foreground="#fff" x:Name="buttonMinus" Click="ButtonOp"/>
-                <Button Grid.Column="2" Grid.Row="0" Background="Transparent" Content="x" FontSize="36" Foreground="#fff" x:Name="buttonTimes" Click="ButtonOp"/>
-                <Button Grid.Column="0" Grid.Row="1" Background="Transparent" Content="/" FontSize="36" Foreground="#fff" x:Name="buttonDevide" Click="ButtonOp"/>
-                <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Content="%" FontSize="36" Foreground="#fff" x:Name="buttonMod" Click="ButtonOp"/>
-                <Button Grid.Column="2" Grid.Row="1" Background="Transparent" Content="()" FontSize="36" Foreground="#fff" x:Name="buttonParenthese" Click="ButtonOp"/>
-                <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="C" FontSize="36" Foreground="#fff" x:Name="buttonReset" Click="ButtonOp"/>
-                <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="H" FontSize="36" Foreground="#fff" x:Name="buttonEquals" Click="ButtonOp"/>
-                <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="=" FontSize="36" Foreground="#fff" x:Name="buttonHistory" Click="ButtonOp"/>
-             </Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" Background="Transparent" Content="+" FontSize="36" Foreground="#fff" x:Name="buttonPlus" Click="ButtonOp"  BorderBrush="#405462"/>
+                    <Button Grid.Column="1" Grid.Row="0" Background="Transparent" Content="-" FontSize="36" Foreground="#fff" x:Name="buttonMinus" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="2" Grid.Row="0" Background="Transparent" Content="x" FontSize="36" Foreground="#fff" x:Name="buttonTimes" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="0" Grid.Row="1" Background="Transparent" Content="/" FontSize="36" Foreground="#fff" x:Name="buttonDevide" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Content="%" FontSize="36" Foreground="#fff" x:Name="buttonMod" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="2" Grid.Row="1" Background="Transparent" Content="()" FontSize="36" Foreground="#fff" x:Name="buttonParenthese" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="C" FontSize="36" Foreground="#fff" x:Name="buttonReset" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="H" FontSize="36" Foreground="#fff" x:Name="buttonEquals" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="=" FontSize="36" Foreground="#fff" x:Name="buttonHistory" Click="ButtonOp" BorderBrush="#405462"/>
+                </Grid>
             </Border>
         </Grid>
     </Grid>
