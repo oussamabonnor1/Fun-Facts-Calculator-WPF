@@ -92,6 +92,10 @@ namespace DesktopApp
                     {
                         operation = 3;
                     }
+                    else if (operationString == "%")
+                    {
+                        operation = 4;
+                    }
                     else
                     {
                         MessageBox.Show("Coming soon...");
@@ -126,6 +130,9 @@ namespace DesktopApp
                         break;
                     case 3:
                         result = firstNum / secondNum;
+                        break;
+                    case 4:
+                        result = firstNum % secondNum;
                         break;
                     default: result = 0;
                         break;
