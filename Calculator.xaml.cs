@@ -20,7 +20,11 @@ namespace DesktopApp
     /// </summary>
     public partial class Calculator : Window
     {
-        
+        float firstNum = 0f;
+        float secondNum = 0f;
+        int operation = -1;
+        String operationString;
+
         public Calculator()
         {
             InitializeComponent();
@@ -37,7 +41,83 @@ namespace DesktopApp
 
         private void ButtonOp(object sender, RoutedEventArgs e)
         {
+            if (this.textBoxOperation.Text.Equals("Operations will appear here..."))
+            {
+                MessageBox.Show("You can't start with an operation!");
+            }
+            else
+            {
+                String tempOp = ((Button) sender).Content.ToString();
+                if (tempOp == "=")
+                {
+                    CalculateSolution();
+                }
+                else if (tempOp == "C"){
+                    firstNum = secondNum = 0;
+                    operation = -1;
+                    operationString = "";
+                    textBoxOperation.Text = "Operations will appear here...";
+                }
+                else
+                {
+                    operationString = tempOp;
 
+                    if (operationString == "+")
+                    {
+                        operation = 0;
+                    }
+                    else if (operationString == "-")
+                    {
+                        operation = 1;
+                    }
+                    else if (operationString == "x")
+                    {
+                        operation = 2;
+                    }
+                    else if (operationString == "/")
+                    {
+                        operation = 3;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Coming soon...");
+                    }
+                    firstNum = float.Parse(this.textBoxOperation.Text);
+                    this.textBoxOperation.Text += ((Button)sender).Content;
+                }
+            }
+
+        }
+
+        void CalculateSolution()
+        {
+            secondNum = float.Parse(this.textBoxOperation.Text.Split(operationString[0])[1]);
+            if (secondNum == 0 && operation == 3)
+            {
+                MessageBox.Show("Error, devision by zero is not tolerated");
+            }
+            else
+            {
+                float result;
+                switch (operation)
+                {
+                    case 0:
+                        result = firstNum + secondNum;
+                        break;
+                    case 1:
+                        result = firstNum - secondNum;
+                        break;
+                    case 2:
+                        result = firstNum * secondNum;
+                        break;
+                    case 3:
+                        result = firstNum / secondNum;
+                        break;
+                    default: result = 0;
+                        break;
+                }
+                this.textBoxSolution.Content = "I think it's " + result;
+            }
         }
     }
 }
