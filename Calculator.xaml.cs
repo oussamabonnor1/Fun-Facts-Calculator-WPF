@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,24 @@ namespace DesktopApp
     /// </summary>
     public partial class Calculator : Window
     {
+        
         public Calculator()
         {
             InitializeComponent();
+        }
+
+        private void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (this.textBoxOperation.Text.Equals("Operations will appear here..."))
+            {
+                this.textBoxOperation.Text = "";
+            }
+            this.textBoxOperation.Text += ((Button)sender).Content;   
+        }
+
+        private void ButtonOp(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
