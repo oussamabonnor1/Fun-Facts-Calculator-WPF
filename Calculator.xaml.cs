@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,7 +43,7 @@ namespace DesktopApp
                 operation = -1;
                 operationString = "";
                 textBoxOperation.Text = "Operations will appear here...";
-                textBoxSolution.Content = "Solution";
+                textBoxSolution.Text = "Solution";
             }
 
             if (this.textBoxOperation.Text.Equals("Operations will appear here..."))
@@ -49,8 +52,8 @@ namespace DesktopApp
             }
             if (((Button)sender).Content.ToString() == "Del")
             {
-                if(this.textBoxOperation.Text.Length > 0)
-                this.textBoxOperation.Text = this.textBoxOperation.Text.Remove(this.textBoxOperation.Text.Length - 1);
+                if (this.textBoxOperation.Text.Length > 0)
+                    this.textBoxOperation.Text = this.textBoxOperation.Text.Remove(this.textBoxOperation.Text.Length - 1);
             }
             else
             {
@@ -66,18 +69,19 @@ namespace DesktopApp
             }
             else
             {
-                String tempOp = ((Button) sender).Content.ToString();
+                String tempOp = ((Button)sender).Content.ToString();
                 if (tempOp == "=")
                 {
                     CalculateSolution();
                 }
-                else if (tempOp == "C"){
+                else if (tempOp == "C")
+                {
                     used = false;
                     firstNum = secondNum = 0;
                     operation = -1;
                     operationString = "";
                     textBoxOperation.Text = "Operations will appear here...";
-                    textBoxSolution.Content = "Solution";
+                    textBoxSolution.Text = "Solution";
                 }
                 else
                 {
@@ -140,29 +144,65 @@ namespace DesktopApp
                     case 4:
                         result = firstNum % secondNum;
                         break;
-                    default: result = 0;
+                    default:
+                        result = 0;
                         break;
                 }
-                string[] preAnswers =
-                {
+                
+                    string[] preAnswers =
+                    {
                     "I think it's ",
                     "You ll get ",
                     "Ehhh...",
                     "Well, it's ",
                     "Pfff, it's "
-                };
-                string[] postAnswers =
-                {
+                    };
+                    string[] postAnswers =
+                    {
                     " Right?",
                     " I'm sure",
                     " I think..",
                     " Or is it?",
                     ""
-                };
-                int randomIndex = new Random().Next(5);
-                this.textBoxSolution.Content =  preAnswers[randomIndex]+ result+ postAnswers[randomIndex];
-                used = true;
+                    };
+                    int randomIndex = new Random().Next(5);
+                    this.textBoxSolution.Text = preAnswers[randomIndex] + result + postAnswers[randomIndex];
+                    used = true;
+
+                if ((result % 1) == 0)
+                {
+                    getFunnyFact("http://numbersapi.com/" + result);
+                }
             }
+        }
+
+        private void funnyFact(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(this.textBoxOperation.Text, out int a))
+                getFunnyFact("http://numbersapi.com/" + a);
+            else MessageBox.Show("Please enter a valid format (integer)");
+        }
+
+        void getFunnyFact(string url)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(url);
+
+            request.Method = "GET";
+            
+            var content = string.Empty;
+
+            using (var response = (HttpWebResponse)request.GetResponse())
+            {
+                using (var stream = response.GetResponseStream())
+                {
+                    using (var sr = new StreamReader(stream))
+                    {
+                        content = sr.ReadToEnd();
+                    }
+                }
+            }
+            //textBoxSolution.Text = content;
+            MessageBox.Show(content);
         }
     }
 }

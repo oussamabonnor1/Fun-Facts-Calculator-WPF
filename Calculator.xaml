@@ -17,7 +17,8 @@
                 <RowDefinition Height=".47*"/>
             </Grid.RowDefinitions>
             <TextBox x:Name="textBoxOperation" BorderBrush="#618FE0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8" IsReadOnly="True" FontSize="36" Text="Operations will appear here..." Background="Transparent"/>
-            <Label x:Name="textBoxSolution" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8"  FontSize="36" Content="Solution" Grid.Row="1" FontWeight="Bold"/>
+            <TextBox x:Name="textBoxSolution" BorderBrush="#618FE0"  Text="Solutions" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8" IsReadOnly="True" FontSize="36" Background="Transparent" Grid.Row="1" FontWeight="Bold"/>
+            
         </Grid>
         <Grid Grid.Row="1"  Background="#FF405462">
             <Grid.ColumnDefinitions>
@@ -70,7 +71,7 @@
                     <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Content="%" FontSize="36" Foreground="#fff" x:Name="buttonMod" Click="ButtonOp" BorderBrush="#405462"/>
                     <Button Grid.Column="0" Grid.Row="1" Background="Transparent" Content="()" FontSize="36" Foreground="#fff" x:Name="buttonParenthese" Click="ButtonOp" BorderBrush="#405462"/>
                     <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="C" FontSize="36" Foreground="#fff" x:Name="buttonReset" Click="ButtonOp" BorderBrush="#405462"/>
-                    <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="?" FontSize="36" Foreground="#fff" x:Name="buttonEquals" Click="ButtonOp" BorderBrush="#405462"/>
+                    <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="?" FontSize="36" Foreground="#fff" x:Name="buttonEquals" Click="funnyFact" BorderBrush="#405462"/>
                     <Button Grid.Column="2" Grid.Row="2" Background="#78E08F" Content="=" FontSize="36" Foreground="#fff" x:Name="buttonHistory" Click="ButtonOp" BorderBrush="#405462"/>
                 </Grid>
             </Border>
