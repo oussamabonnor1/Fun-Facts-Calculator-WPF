@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopApp"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="Calculator" Height="450" Width="800">
     <Grid Background="#29363F">
         <Grid.RowDefinitions>

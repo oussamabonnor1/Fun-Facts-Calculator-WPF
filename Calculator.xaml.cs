@@ -183,7 +183,7 @@ namespace DesktopApp
             else MessageBox.Show("Please enter a valid format (integer)");
         }
 
-        void getFunnyFact(string url)
+        public async Task<string>  getFunnyFact(string url)
         {
             var request = (HttpWebRequest)WebRequest.Create(url);
 
@@ -191,18 +191,19 @@ namespace DesktopApp
             
             var content = string.Empty;
 
-            using (var response = (HttpWebResponse)request.GetResponse())
-            {
-                using (var stream = response.GetResponseStream())
-                {
-                    using (var sr = new StreamReader(stream))
-                    {
-                        content = sr.ReadToEnd();
-                    }
-                }
-            }
-            //textBoxSolution.Text = content;
+            var response = await request.GetResponseAsync();
+            var stream = response.GetResponseStream();
+            var sr = new StreamReader(stream);
+            content = sr.ReadToEnd();
+               
+                        //textBoxSolution.Text = content;
             new FunFact(content).Show();
+            return "";
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
