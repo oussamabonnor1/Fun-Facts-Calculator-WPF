@@ -202,7 +202,7 @@ namespace DesktopApp
                 }
             }
             //textBoxSolution.Text = content;
-            MessageBox.Show(content);
+            new FunFact(content).Show();
         }
     }
 }

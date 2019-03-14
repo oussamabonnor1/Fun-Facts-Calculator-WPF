@@ -21,3 +21,5 @@ C:\Users\oussama\source\repos\DesktopApp\DesktopApp\bin\Debug\System.Net.Http.Ex
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.csproj.App.config
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.csproj.CopyComplete
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\FunFact.g.cs
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\FunFact.baml
