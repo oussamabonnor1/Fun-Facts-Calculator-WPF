@@ -46,7 +46,7 @@
                 <Button Grid.Column="0" Grid.Row="2" Background="Transparent" Content="7" FontSize="36" Foreground="#fff" x:Name="buttonSeven" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="1" Grid.Row="2" Background="Transparent" Content="8" FontSize="36" Foreground="#fff" x:Name="buttonEight" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="9" FontSize="36" Foreground="#fff" x:Name="buttonNine" Click="ButtonClick" BorderBrush="#999FA8"/>
-                <Button Grid.Column="3" Grid.Row="0" Background="Transparent" Content="+/-" FontSize="36" Foreground="#fff" x:Name="buttonRel" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="3" Grid.Row="0" FontSize="36" Content="Del" Foreground="#fff" x:Name="buttonDel" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="3" Grid.Row="1" Background="Transparent" Content="0" FontSize="36" Foreground="#fff" x:Name="buttonZero" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="3" Grid.Row="2" Background="Transparent" Content="," FontSize="36" Foreground="#fff" x:Name="buttonPoint" Click="ButtonClick" BorderBrush="#999FA8"/>
             </Grid>

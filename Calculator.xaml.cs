@@ -47,7 +47,14 @@ namespace DesktopApp
             {
                 this.textBoxOperation.Text = "";
             }
-            this.textBoxOperation.Text += ((Button)sender).Content;   
+            if (((Button)sender).Content.ToString() == "Del" && this.textBoxOperation.Text.Length > 0)
+            {
+                this.textBoxOperation.Text = this.textBoxOperation.Text.Remove(this.textBoxOperation.Text.Length - 1);
+            }
+            else
+            {
+                this.textBoxOperation.Text += ((Button)sender).Content;
+            }
         }
 
         private void ButtonOp(object sender, RoutedEventArgs e)

@@ -13,7 +13,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="#FF8B8B8B" BorderThickness="0 0 .3 0">
-            <Image Source="/Res/calculator.png" Margin="75"/>
+            <Image Source="{DynamicResource Logo}" Margin="75">
+                <Image.Resources>
+                    <BitmapImage x:Key="Logo" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="C:\Users\oussama\source\repos\DesktopApp\DesktopApp\Res\calculator.png"/>
+                </Image.Resources>
+            </Image>
         </Border>
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBox x:Name="textBoxEmail" Margin="50 15 50 15" Height="30" Padding="5" Background="Transparent" BorderBrush="#11A1D5" Foreground="White"/>
@@ -29,5 +33,5 @@
             </Grid>
         </StackPanel>
     </Grid>
-    
+
 </Window>
