@@ -20,11 +20,10 @@ namespace DesktopApp
     /// </summary>
     public partial class Calculator : Window
     {
-        float firstNum = 0f;
-        float secondNum = 0f;
+        double firstNum = 0f;
+        double secondNum = 0f;
         int operation = -1;
-        String operationString;
-        String answers;
+        string operationString;
         bool used;
 
         public Calculator()
@@ -100,7 +99,7 @@ namespace DesktopApp
                     {
                         MessageBox.Show("Coming soon...");
                     }
-                    firstNum = float.Parse(this.textBoxOperation.Text);
+                    firstNum = double.Parse(this.textBoxOperation.Text);
                     this.textBoxOperation.Text += ((Button)sender).Content;
                 }
             }
@@ -109,14 +108,14 @@ namespace DesktopApp
 
         void CalculateSolution()
         {
-            secondNum = float.Parse(this.textBoxOperation.Text.Split(operationString[0])[1]);
+            secondNum = double.Parse(this.textBoxOperation.Text.Split(operationString[0])[1]);
             if (secondNum == 0 && operation == 3)
             {
                 MessageBox.Show("Error, devision by zero is not tolerated");
             }
             else
             {
-                float result;
+                double result;
                 switch (operation)
                 {
                     case 0:
@@ -137,7 +136,7 @@ namespace DesktopApp
                     default: result = 0;
                         break;
                 }
-                String[] preAnswers =
+                string[] preAnswers =
                 {
                     "I think it's ",
                     "You ll get ",
@@ -145,7 +144,7 @@ namespace DesktopApp
                     "Well, it's ",
                     "Pfff, it's "
                 };
-                String[] postAnswers =
+                string[] postAnswers =
                 {
                     " Right?",
                     " I'm sure",

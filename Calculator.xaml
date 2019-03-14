@@ -13,10 +13,10 @@
         </Grid.RowDefinitions>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height=".55*"/>
-                <RowDefinition Height=".45*"/>
+                <RowDefinition Height=".53*"/>
+                <RowDefinition Height=".47*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="textBoxOperation" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8" FontSize="36" Text="Operations will appear here..." Background="{x:Null}"/>
+            <TextBox x:Name="textBoxOperation" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8" IsReadOnly="True" FontSize="36" Text="Operations will appear here..." Background="{x:Null}"/>
             <Label x:Name="textBoxSolution" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Padding="15" Foreground="#FF999FA8"  FontSize="36" Content="Solution" Grid.Row="1" FontWeight="Bold"/>
         </Grid>
         <Grid Grid.Row="1"  Background="#FF405462">
@@ -48,7 +48,7 @@
                 <Button Grid.Column="2" Grid.Row="2" Background="Transparent" Content="9" FontSize="36" Foreground="#fff" x:Name="buttonNine" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="3" Grid.Row="0" Background="Transparent" Content="+/-" FontSize="36" Foreground="#fff" x:Name="buttonRel" Click="ButtonClick" BorderBrush="#999FA8"/>
                 <Button Grid.Column="3" Grid.Row="1" Background="Transparent" Content="0" FontSize="36" Foreground="#fff" x:Name="buttonZero" Click="ButtonClick" BorderBrush="#999FA8"/>
-                <Button Grid.Column="3" Grid.Row="2" Background="Transparent" Content="." FontSize="36" Foreground="#fff" x:Name="buttonPoint" Click="ButtonClick" BorderBrush="#999FA8"/>
+                <Button Grid.Column="3" Grid.Row="2" Background="Transparent" Content="," FontSize="36" Foreground="#fff" x:Name="buttonPoint" Click="ButtonClick" BorderBrush="#999FA8"/>
             </Grid>
             <Border BorderThickness="1 0 0 0" Grid.Column="1" BorderBrush="#405462" Background="#618FE0">
                 <Grid >
