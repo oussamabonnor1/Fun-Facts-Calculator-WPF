@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-c:\users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\
+c:\users\oussama\source\repos\DesktopApp\DesktopApp\obj\Release\
 DesktopApp
 none
 false
-DEBUG;TRACE
+TRACE
 c:\users\oussama\source\repos\DesktopApp\DesktopApp\App.xaml
 2-813100147
 
