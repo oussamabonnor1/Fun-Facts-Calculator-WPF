@@ -24,6 +24,8 @@ namespace DesktopApp
         float secondNum = 0f;
         int operation = -1;
         String operationString;
+        String answers;
+        bool used;
 
         public Calculator()
         {
@@ -32,6 +34,16 @@ namespace DesktopApp
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
+            if (used)
+            {
+                used = false;
+                firstNum = secondNum = 0;
+                operation = -1;
+                operationString = "";
+                textBoxOperation.Text = "Operations will appear here...";
+                textBoxSolution.Content = "Solution";
+            }
+
             if (this.textBoxOperation.Text.Equals("Operations will appear here..."))
             {
                 this.textBoxOperation.Text = "";
@@ -53,10 +65,12 @@ namespace DesktopApp
                     CalculateSolution();
                 }
                 else if (tempOp == "C"){
+                    used = false;
                     firstNum = secondNum = 0;
                     operation = -1;
                     operationString = "";
                     textBoxOperation.Text = "Operations will appear here...";
+                    textBoxSolution.Content = "Solution";
                 }
                 else
                 {
@@ -116,7 +130,25 @@ namespace DesktopApp
                     default: result = 0;
                         break;
                 }
-                this.textBoxSolution.Content = "I think it's " + result;
+                String[] preAnswers =
+                {
+                    "I think it's ",
+                    "You ll get ",
+                    "Ehhh...",
+                    "Well, it's ",
+                    "Pfff, it's "
+                };
+                String[] postAnswers =
+                {
+                    " Right?",
+                    " I'm sure",
+                    " I think..",
+                    " Or is it?",
+                    ""
+                };
+                int randomIndex = new Random().Next(5);
+                this.textBoxSolution.Content =  preAnswers[randomIndex]+ result+ postAnswers[randomIndex];
+                used = true;
             }
         }
     }
