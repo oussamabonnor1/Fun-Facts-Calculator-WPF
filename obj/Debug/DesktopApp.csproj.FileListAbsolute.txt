@@ -23,3 +23,8 @@ C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.csproj.
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.csproj.CopyComplete
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\FunFact.g.cs
 C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\FunFact.baml
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\bin\Debug\DesktopApp.exe.manifest
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\bin\Debug\DesktopApp.application
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.TrustInfo.xml
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.exe.manifest
+C:\Users\oussama\source\repos\DesktopApp\DesktopApp\obj\Debug\DesktopApp.application
