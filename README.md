@@ -6,6 +6,9 @@ This calculator is my first attemtp at WPF, it can perform simple mathematical o
 
 ## Screenshots:
 
+<img width="640" height="390" src="./res/Screenshots/calculatorEmpty.png">
+<img width="640" height="390" src="./res/Screenshots/calculatorWorking.png">
+<img width="440" height="260" src="./res/Screenshots/funFact.png">
 
 ## Tools used:
 * Visual studio (IDE)
