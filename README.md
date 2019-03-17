@@ -37,4 +37,4 @@ Feel free to `fork` this project and add whatever you like (Helping with the TOD
 ## Team:
 `Jetlighters` having fun.
 
-* Special thanks to [Amine Smahi]() for his help with annoying questions i've had about WPF.
+* Special thanks to [Amine Smahi](https://github.com/Amine-Smahi) for his help with annoying questions i've had about WPF.
