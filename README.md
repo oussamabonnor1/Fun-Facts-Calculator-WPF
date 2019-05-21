@@ -1,6 +1,7 @@
 # SimpleCalculator-WPF
 
 ![GitHub license](https://img.shields.io/github/license/oussamabonnor1/SimpleCalculator-WPF.svg)
+![Jetlight studio](https://img.shields.io/badge/Made%20by-Jetlight%20studio-blue.svg?color=082544)
 
 This calculator is my first attemtp at WPF, it can perform simple mathematical operations such as addition, multiplication...etc. In order to add a little "something" to it, the calculator offers a small fun fact about the calculated result (only if it's an integer).
 
@@ -35,6 +36,6 @@ Run publish/setup.exe
 Feel free to `fork` this project and add whatever you like (Helping with the TODOs would be amazing tho). If you have any suggestions or any comments please feel free to contact me or to open an issue.
 
 ## Team:
-`Jetlighters` having fun.
+[Jetlighters](https://github.com/JetLightStudio) having fun.
 
 * Special thanks to [Amine Smahi](https://github.com/Amine-Smahi) for his help with annoying questions i've had about WPF.
